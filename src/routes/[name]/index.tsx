@@ -4,7 +4,6 @@ import type { Dino } from "~/types";
 import data from "~/data/dinosaurs.json" with { type: "json" };
 
 export const useDinosaurDetails = routeLoader$(({ params }): Dino => {
-  const _dinosaurs = data;
   const dinosaur = data.dinosaurs.find(
     (dino: Dino) => dino.name.toLowerCase() === params.name.toLowerCase(),
   );
